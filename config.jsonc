@@ -17,6 +17,10 @@
 		"3": "",
 		"4": "",
 		"5": "",
+		"6": "",
+		"7": "",
+		"8": "",
+		"9": "",
 		// "active": "",
 	},
 	"persistent-workspaces": {
@@ -34,6 +38,7 @@
 // },
 
   "modules-center": [
+    "custom/weather",
     "clock",
     "tray",
   ],
@@ -164,7 +169,8 @@
   },
   "network": {
     "format-wifi": "{essid} {signalStrength}% ",
-    "format-ethernet": "{ipaddr}/{cidr} ",
+    // "format-ethernet": "{ipaddr}/{cidr} ",
+    "format-ethernet": "on ",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
@@ -222,8 +228,6 @@
     "return-type": "json",
     "exec": "fish -c 'set count (checkupdates 2>/dev/null | wc -l); or set count 0; echo \"{\\\"text\\\": \\\"$count\\\", \\\"tooltip\\\": \\\"$count updates available\\\", \\\"class\\\": \\\"$(if test $count -gt 0; echo updates-available; else; echo no-updates; end)\\\"}\"'",
     "interval": 3600,
-    "on-click": "alacritty -e sudo pacman -Syu",
-    "tooltip": true
   },
 
   "disk": {
