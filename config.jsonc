@@ -219,16 +219,16 @@
     "max-length": 80
   },
 
-  "custom/checkupdates": {
-    "format": "{icon} {text}",
-    "format-icons": {
-      "0": "",
-      "default": "󰮯"
-    },
-    "return-type": "json",
-    "exec": "fish -c 'set count (checkupdates 2>/dev/null | wc -l); or set count 0; echo \"{\\\"text\\\": \\\"$count\\\", \\\"tooltip\\\": \\\"$count updates available\\\", \\\"class\\\": \\\"$(if test $count -gt 0; echo updates-available; else; echo no-updates; end)\\\"}\"'",
-    "interval": 3600,
+"custom/checkupdates": {
+  "format": "{icon} {text}",
+  "format-icons": {
+    "0": "",
+    "default": "󰮯"
   },
+  "return-type": "json",
+  "exec": "fish -c 'set count (checkupdates 2>/dev/null | wc -l); or set count 0; set class (if test $count -gt 0; echo updates-available; else; echo no-updates; end); echo (printf \"{\\\"text\\\": \\\"%s\\\", \\\"tooltip\\\": \\\"%s updates available\\\", \\\"class\\\": \\\"%s\\\"}\" $count $count $class)'",
+  "interval": 3600
+},
 
   "disk": {
     "interval": 30,
