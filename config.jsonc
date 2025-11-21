@@ -29,9 +29,10 @@
 	}
 },
 
-// "hyprland/language": {
-//     "format": "{}",
-// },
+"hyprland/language": {
+    "format": "{}",
+    "format": "{short} {variant}"
+},
 
 // "sway/language": {
 //     "format": "{}"
@@ -44,6 +45,7 @@
   ],
 
   "modules-right": [
+    "hyprland/language",
     "custom/checkupdates",
     "network",
     "pulseaudio",
