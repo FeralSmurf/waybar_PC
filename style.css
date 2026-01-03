@@ -84,7 +84,8 @@ button:hover {
 }
 
 #workspaces button.focused {
-    background-color: @black;
+    background-color: @green;
+    color: @base;
     box-shadow: inset 0 0px @text; /* no bottom border */
 }
 
