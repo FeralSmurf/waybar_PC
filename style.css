@@ -181,6 +181,8 @@ label:focus {
 #pulseaudio {
     background-color: @black;
     color: @text;
+    padding-left: 10px;
+    padding-right: 15px;
 }
 
 #pulseaudio.muted {
